@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
-from backend.database import get_db
-from backend.models import User, FitnessPlan
-from backend.schemas import FitnessPlanCreate, FitnessPlanUpdate, FitnessPlanFull
-from backend.auth import require_trainer
+from database import get_db
+from models import User, FitnessPlan
+from schemas import FitnessPlanCreate, FitnessPlanUpdate, FitnessPlanFull
+from auth import require_trainer
 
 router = APIRouter(prefix="/trainer", tags=["Trainer"])
 
